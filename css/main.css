@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9a620;
+  color: #104911;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #f9a620;
+  justify-content: flex-end;
+  border-bottom: 3px solid #104911;
+}
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #104911;
+  font-family: "Lobster", cursive;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+nav a:not(:first-child):hover {
+  color: #f9a620;
+  background-color: #104911;
+}
+nav #logo {
+  margin-right: auto;
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+}
+
+section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lobster", cursive;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+  height: 85px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+}
+
+.menu {
+  display: grid;
+  grid-template: repeat(3, auto)/repeat(3, auto);
+  justify-items: center;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  padding: 0 0 1.5rem;
+  background-color: #f9a620;
+  width: 250px;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+}
+.menu-item img {
+  border-radius: 2rem 2rem 0 0;
+  margin: 0 0 1.5rem;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+.menu-item .menu-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-item h3,
+.menu-item p {
+  padding: 0.5rem;
+}
+.menu-item h3 {
+  font-size: 1.5rem;
+}
+
+.price {
+  margin-top: auto;
+  font-weight: bold;
+}
+
+#hero {
+  height: 95vh;
+  background-image: url("../img/grilledCheese1.jpg");
+  background-size: cover;
+  margin-top: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(199, 132, 25, 0.6);
+  font-family: "Lobster", cursive;
+  color: #f9a620;
+  text-shadow: #104911 5px 5px 2px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 4rem;
+  border-radius: 2rem;
+}
+.overlay span {
+  margin-top: 0;
+  font-size: 6rem;
+  letter-spacing: 0.4rem;
+  line-height: normal;
+}
+
+#location {
+  font-size: 1.2rem;
+}
+
+.location-content {
+  -webkit-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+}
+
+.addresses {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.addresses p {
+  margin: 1.5rem;
+}
+
+.about-content {
+  -webkit-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.about-content img {
+  margin: 0;
+  object-fit: cover;
+  width: 50%;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+.about-content p {
+  padding: 1rem 1.5rem;
+}
+
+.contact-content {
+  -webkit-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  width: 50vw;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+}
+.contact-content #mailingList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.contact-content input {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+}
+.contact-content .submit {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: #c78419;
+  background-color: #104911;
+  border: 3px solid #c78419;
+  border-radius: 2rem;
+  font-family: "Lobster", cursive;
+}
+
+/*Media Queries*/
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

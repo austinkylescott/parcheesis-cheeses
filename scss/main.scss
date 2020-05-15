@@ -1,0 +1,253 @@
+@use 'color';
+@use 'font';
+$box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: color.$background-color;
+  color: color.$primary-color;
+  font-family: font.$primary-font;
+}
+.container {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(color.$background-color, 1);
+  justify-content: flex-end;
+  border-bottom: 3px solid color.$primary-color;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: color.$primary-color;
+    font-family: font.$display-font;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+
+    &:not(:first-child):hover {
+      color: color.$background-color;
+      background-color: rgba(color.$primary-color, 1);
+    }
+  }
+
+  #logo {
+    margin-right: auto;
+    font-family: font.$display-font;
+    font-size: 2.5rem;
+  }
+}
+
+section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: font.$display-font;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+  height: 85px;
+}
+h1 {
+  font-size: 2.5rem;
+  padding: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+}
+.menu {
+  display: grid;
+  grid-template: repeat(3, auto) / repeat(3, auto);
+  justify-items: center;
+  width: 60vw;
+  margin: 0 auto;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  padding: 0 0 1.5rem;
+  background-color: color.$background-color;
+  width: 250px;
+  border-radius: 2rem;
+
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+
+  img {
+    border-radius: 2rem 2rem 0 0;
+    margin: 0 0 1.5rem;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+  }
+
+  .menu-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h3,
+  p {
+    padding: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.price {
+  margin-top: auto;
+  font-weight: bold;
+}
+
+#hero {
+  height: 95vh;
+  background-image: url("../img/grilledCheese1.jpg");
+  background-size: cover;
+  margin-top: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: color.$bg-color-dark, $alpha: 0.6);
+  font-family: font.$display-font;
+  color: color.$background-color;
+
+  text-shadow: color.$primary-color 5px 5px 2px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 4rem;
+  border-radius: 2rem;
+
+  span {
+    margin-top: 0;
+    font-size: 6rem;
+    letter-spacing: 0.4rem;
+    line-height: normal;
+  }
+}
+
+#location {
+  font-size: 1.2rem;
+}
+
+.location-content {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+}
+.addresses {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  p {
+    margin: 1.5rem;
+  }
+}
+
+.about-content {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+
+  border-radius: 1.5rem;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  img {
+    margin: 0;
+    object-fit: cover;
+    width: 50%;
+    border-radius: 1.5rem 0 0 1.5rem;
+  }
+
+  p {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.contact-content {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  width: 50vw;
+  margin: 0 auto;
+  font-family: font.$primary-font;
+
+  #mailingList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  input {
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1rem;
+  }
+
+  .submit {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: rgba(color.$bg-color-dark, 1);
+    background-color: rgba(color.$primary-color, 1);
+    border: 3px solid color.$bg-color-dark;
+    border-radius: 2rem;
+    font-family: font.$display-font;
+  }
+}
+
+/*Media Queries*/
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
