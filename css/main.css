@@ -124,7 +124,7 @@ h2 {
 
 #hero {
   height: 95vh;
-  background-image: url("../img/grilledCheese1.jpg");
+  background-image: url("../img/compressed/grilledCheese1-min.jpg");
   background-size: cover;
   margin-top: 85px;
   display: flex;
